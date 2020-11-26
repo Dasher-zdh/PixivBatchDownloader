@@ -1,3 +1,11 @@
+**警告：**
+
+这是一个分支，目前基于 8.2.0 版本，与主分支的区别在于：
+
+1. 这个分支在抓取关注的用户时，当获取完了用户列表，会输出关注的用户的 id 列表。
+
+---------
+
 [English](https://github.com/xuejianxianzun/PixivBatchDownloader/blob/master/README-EN.md)
 
 [繁體中文](https://github.com/xuejianxianzun/PixivBatchDownloader/blob/master/README-ZH-TW.md)

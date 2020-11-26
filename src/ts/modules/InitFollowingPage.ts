@@ -7,6 +7,7 @@ import { API } from './API'
 import { store } from './Store'
 import { log } from './Log'
 import { DOM } from './DOM'
+import { EVT } from './EVT'
 
 class InitFollowingPage extends InitPageBase {
   constructor() {
@@ -129,6 +130,12 @@ class InitFollowingPage extends InitPageBase {
     if (this.userList.length === 0) {
       return this.getIdListFinished()
     }
+
+    EVT.fire(EVT.list.output, {
+      content: this.userList.join('<br />'),
+      title: 'Following user id list',
+    })
+
     this.getIdList()
   }
 

@@ -6801,6 +6801,9 @@
         /* harmony import */ var _DOM__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
           /*! ./DOM */ './src/ts/modules/DOM.ts',
         )
+        /* harmony import */ var _EVT__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+          /*! ./EVT */ './src/ts/modules/EVT.ts',
+        )
         // 初始化关注列表页面
 
         class InitFollowingPage extends _InitPageBase__WEBPACK_IMPORTED_MODULE_0__[
@@ -6944,6 +6947,13 @@
             if (this.userList.length === 0) {
               return this.getIdListFinished()
             }
+            _EVT__WEBPACK_IMPORTED_MODULE_8__['EVT'].fire(
+              _EVT__WEBPACK_IMPORTED_MODULE_8__['EVT'].list.output,
+              {
+                content: this.userList.join('<br />'),
+                title: 'Following user id list',
+              },
+            )
             this.getIdList()
           }
           // 获取用户的 id 列表
